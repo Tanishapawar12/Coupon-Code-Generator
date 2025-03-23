@@ -6,7 +6,6 @@ public class CouponModel {
      private String couponCode;
     private double discountPercentage;
 
-    // Method to generate a random coupon code
     public String generateCouponCode() {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         Random random = new Random();
@@ -20,16 +19,15 @@ public class CouponModel {
         return this.couponCode;
     }
 
-    // Method to get the discount percentage based on user type
     public double getDiscountPercentage(int userType) {
         switch (userType) {
-            case 1: // Daily Customer
+            case 1: 
                 discountPercentage = 15.0;
                 break;
-            case 2: // New User
+            case 2: 
                 discountPercentage = 10.0;
                 break;
-            case 3: // Special User
+            case 3: 
                 discountPercentage = 20.0;
                 break;
             default:
@@ -39,7 +37,6 @@ public class CouponModel {
         return discountPercentage;
     }
 
-    // Getters for coupon code and discount percentage
     public String getCouponCode() {
         return couponCode;
     }
